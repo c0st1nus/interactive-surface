@@ -1,0 +1,41 @@
+[package]
+name = "interactive-surface"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Камера (уже работает!)
+rscam = "0.5"
+
+# GUI
+egui = "0.32.3"
+eframe = "0.32.3"
+
+# Мышь
+enigo = "0.6.1"
+
+# Обработка изображений
+image = "0.25"
+
+# Звук (простой)
+rodio = { version = "0.21.1", optional = true }
+
+# Сериализация настроек
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Базовые утилиты  
+anyhow = "1.0"
+log = "0.4"
+env_logger = "0.11"
+
+# Параллелизм
+rayon = "1.10"
+
+# QR code detection
+rqrr = "0.7"
+quircs = "0.11"
+
+[features]
+default = []
+audio = ["rodio"]
